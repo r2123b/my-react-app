@@ -1,5 +1,3 @@
-import './App.css';
-
 import React from 'react';
 import { Router } from 'react-router';
 import { Redirect, Route, Switch } from 'react-router-dom';
