@@ -1,11 +1,12 @@
+import './App.css';
+
 import React from 'react';
 import { Router } from 'react-router';
 import { Redirect, Route, Switch } from 'react-router-dom';
+
 import { createBrowserHistory } from 'history';
 
 import Console from './containers/Console';
-
-import './App.css';
 
 const history = createBrowserHistory();
 

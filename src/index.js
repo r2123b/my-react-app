@@ -1,13 +1,16 @@
+import './index.css';
+
 import React from 'react';
 import { render } from 'react-dom';
-import './index.css';
+
+import jss from 'jss';
+import preset from 'jss-preset-default';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import preset from 'jss-preset-default';
-import styles from './styles';
 import App from './App';
-import jss from 'jss';
 import * as serviceWorker from './serviceWorker';
+import styles from './styles';
 
 // create global styles
 jss.setup(preset());
