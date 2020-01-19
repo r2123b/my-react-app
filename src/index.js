@@ -1,18 +1,25 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-import jss from 'jss';
 import preset from 'jss-preset-default';
 import styles from './styles';
 import App from './App';
+import jss from 'jss';
 import * as serviceWorker from './serviceWorker';
 
 // create global styles
 jss.setup(preset());
 jss.createStyleSheet(styles(), { meta: 'global' }).attach();
 
-render(<App />, document.getElementById('root'));
+render(
+  <>
+    <CssBaseline />
+    <App />
+  </>,
+  document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

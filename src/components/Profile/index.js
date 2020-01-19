@@ -1,17 +1,19 @@
 import React from 'react';
 
+import Typography from '@material-ui/core/Typography';
+
 const Profile = () => {
   return (
     <>
-      <div className="text-bold">This is profile page</div>
-      <div className="d-flex">
-        <div>Name</div>
-        <div>Jacky</div>
+      <Typography className="text-bold">This is profile page</Typography>
+      <div className="d-flex align-center">
+        <Typography variant="body1">Name</Typography>
+        <Typography variant="body2">Jacky</Typography>
       </div>
 
-      <div className="d-flex">
-        <div>Email</div>
-        <div>jacky@gmail.com</div>
+      <div className="d-flex align-center">
+        <Typography variant="body1">Email</Typography>
+        <Typography variant="body2">jacky@gmail.com</Typography>
       </div>
     </>
   );
