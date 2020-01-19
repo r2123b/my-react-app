@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
+import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 
-import Profile from "../../../components/Profile";
+import Profile from '@/components/Profile';
 
 const Account = () => {
   const { url } = useRouteMatch();
