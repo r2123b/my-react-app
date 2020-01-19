@@ -18,6 +18,11 @@
     "fix:lint": "eslint src --fix",
     "eject": "react-scripts eject"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --pattern \"**/my-react-app/**/*.*(js|jsx)\" --staged"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -48,9 +53,11 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-plugin-simple-import-sort": "^5.0.0",
+    "husky": "^4.0.10",
     "jss-preset-default": "^10.0.3",
     "lodash": "^4.17.15",
     "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "react-app-rewired": "^2.1.5",
     "react-loadable": "^5.5.0",
     "react-router": "^5.1.2",
