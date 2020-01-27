@@ -8,7 +8,7 @@ import { clearProfile, fetchProfile } from '@/features/Account/profile';
 
 const Profile = () => {
   const dispatch = useDispatch();
-  const { t } = useTranslation('account');
+  const { t, i18n } = useTranslation('account');
 
   // on more complex case, use reselect library
   const profile = useSelector(state => state.profile);
@@ -19,9 +19,17 @@ const Profile = () => {
     return () => dispatch(clearProfile());
   }, []);
 
+  const onChangeToEnglish = () => {
+    i18n.changeLanguage('en-US');
+  };
+
+  const onChangeToChinese = () => {
+    i18n.changeLanguage('zh-TW');
+  };
+
   return (
     <>
-      <Typography className="text-bold">This is profile page</Typography>
+      <Typography className="text-bold">{t('Profile.Title')}</Typography>
       <div className="d-flex align-center">
         <Typography variant="body1">{t('Profile.Name')}</Typography>
         <Typography variant="body2">{profile.name}</Typography>
@@ -31,6 +39,9 @@ const Profile = () => {
         <Typography variant="body1">{t('Profile.Email')}</Typography>
         <Typography variant="body2">{profile.email}</Typography>
       </div>
+
+      <button onClick={onChangeToEnglish}>English</button>
+      <button onClick={onChangeToChinese}>中文</button>
     </>
   );
 };

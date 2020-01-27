@@ -1,5 +1,6 @@
 {
   "Profile": {
+    "Title": "This is profile page",
     "Name": "Name",
     "Email": "Email"
   }
