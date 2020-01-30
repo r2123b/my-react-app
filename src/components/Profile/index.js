@@ -14,7 +14,7 @@ const Profile = () => {
   const profile = useSelector(state => state.profile);
 
   useEffect(() => {
-    dispatch(fetchProfile());
+    dispatch(fetchProfile({ userName: 'JackyTung' }));
 
     return () => dispatch(clearProfile());
   }, []);
