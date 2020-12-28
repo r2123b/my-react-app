@@ -16,7 +16,9 @@ const Profile = () => {
   useEffect(() => {
     dispatch(fetchProfile({ userName: 'JackyTung' }));
 
-    return () => dispatch(clearProfile());
+    return () => {
+      dispatch(clearProfile());
+    }
   }, []);
 
   const onChangeToEnglish = () => {
