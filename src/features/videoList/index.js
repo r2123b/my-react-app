@@ -15,8 +15,11 @@ const slice = createSlice({
   reducers: {
     fetchVideoList: () => {},
     fetchVideoListFulfilled: (state, action) => {
-      const { total } = action.payload;
+      const { total, data, currentPage, limitPerPage } = action.payload;
       state.total = total
+      state.data = data
+      state.page = currentPage
+      state.limit = limitPerPage
     },
     fetchVideoListRejected: (state, action) => {
       return state;

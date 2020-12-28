@@ -6,7 +6,9 @@ export const getProfile = ({ userName }) => ajax.getJSON(`https://api.github.com
 
 export const getVideoList = ({ page, limit }) => {
     return of({
-        data: [{id: 1, name: 'video1'}, {id: 2, name: 'video2'}],
         total: 50,
+        data: [{id: 1, name: 'video1'}, {id: 2, name: 'video2'}],
+        currentPage: page,
+        limitPerPage: limit
     }).pipe(delay(1500));
   };

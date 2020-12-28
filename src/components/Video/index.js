@@ -7,21 +7,24 @@ const AnnotationComponent = () => {
   const dispatch = useDispatch();
 
   // on more complex case, use reselect library
-  // use useSelector() to get response data from 
-  const videos = useSelector(state => state.video);
+  // use useSelector() to fetch data from reducers
+  const videos = useSelector(state => state.videoList);
 
   useEffect(() => {
-    dispatch(fetchVideoList({ page: 1, limit: 10 }));
+    // dispatch an action
+    dispatch(fetchVideoList({ page: 5, limit: 15 }));
 
     return () => dispatch(fetchVideoListCancelled());
   }, []);
 
   return (
     <>
-      <div>This is Annotatioin page</div>
-      <div>{JSON.stringify(videos)}</div>
+      <div>~~~ This is Video page ~~~</div>
+      <div>total videos number is {JSON.stringify(videos.total)}</div>
+      <div>videos = {JSON.stringify(videos.data, null, '\t')}</div>
+      <div>rawdata = {JSON.stringify(videos, null, '\t')}</div>
     </>
-    );
+  );
 };
 
 export default AnnotationComponent; 
